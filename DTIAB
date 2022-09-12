@@ -1,0 +1,13 @@
+//
+// DTIAB is a tool that converts any integer to its binary representation.
+//
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+struct moduloResults {
+    int result, rest;
+};
+
+typedef struct moduloResults Struct;
