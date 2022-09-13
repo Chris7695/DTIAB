@@ -45,17 +45,18 @@ int main() {
     int arraySize = sizeArray(st.result);
 
     // Binary Array
-    bool binaryArray[arraySize];
+    bool binaryArray[arraySize], binaryArrayR[arraySize];
 
     for (i = 0; st.result > 0; i++) {
         st = moduloINT(st.result);
-        binaryArray[i] = st.rest;
+        binaryArrayR[i] = st.rest;
     }
 
-    length = sizeof(binaryArray);
+    length = sizeof(binaryArrayR)-1;
 
-    for (i = 0; i <= length-1; i++)
+    for (i = 0; i <= length; i++)
     {
+	binaryArray[i] = binaryArrayR[length-i];
         printf("%d", binaryArray[i]);
     }
 }
