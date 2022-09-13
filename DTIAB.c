@@ -3,6 +3,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
@@ -35,12 +36,17 @@ int sizeArray(int in)
     return i;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int i, length = 0;
     Struct st;
 
+    if (argc != 2) {
+        printf("falsche Argumentanzahl, Format: %s <WERT>", argv[0]);
+        return 1;
+    }
+
     // Eingabe Wert
-    st.result = 333;
+    st.result = atoi(argv[1]);
 
     int arraySize = sizeArray(st.result);
 
